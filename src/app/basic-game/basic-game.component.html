@@ -1,25 +1,26 @@
-<div *ngIf="inGame; else letsPlay">
+<div>
     <h2>{{gameStatusMessage}}</h2>
 </div>
 <div>
-    <div class="computer-choice">
+    <div class="choice-box">
         <h3>The Computer</h3>
-    
+        <p>{{computerSelection}}</p>
     </div>
-    <div class="player-choice">
+    <div class="choice-box">
         <h3>You</h3>
-    
+        <p>{{playerSelection}}</p>
     </div>
 </div>
-<div>
-    <button *ngFor="let choice of choices" [disabled]="!inGame" (click)="playGame(choice)">{{choice}}</button>
+<div *ngIf="inGame; else letsPlay">
+    <button *ngFor="let choice of choices" [class.disabled]="!inGame" id="choice-buttons" (click)="playGame(choice)">{{choice}}</button>
     <!-- <button [disabled]="!inGame">Paper</button>
     <button [disabled]="!inGame">Scissors</button> -->
 </div>
-<hr>
 <div>
     <button (click)="handleBanana()">Banana</button>
 </div>
 <ng-template #letsPlay>
-    <button (click)="inGame=true">Let's Play</button>
+    <div>
+        <button class="big-button" (click)="inGame=true">New Game</button>
+    </div>
 </ng-template>

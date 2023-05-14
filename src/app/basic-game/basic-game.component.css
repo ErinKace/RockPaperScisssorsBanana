@@ -1,0 +1,25 @@
+div {
+    text-align: center;
+    padding: 10px;
+}
+
+.big-button {
+    margin: 20px;
+    font-size: 24px;
+}
+
+#choice-buttons {
+    background-color: #06AED5;
+}
+
+.choice-box {
+    margin: 10px;
+    width: 20vw;
+    display: inline-block;
+    color: #000;
+    background-color: #FFF;
+}
+
+.choice-box h3 {
+    color:#000;
+}

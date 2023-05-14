@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicGameComponent implements OnInit {
   inGame: boolean = false;
-  gameStatusMessage: string = 'Make your selection...';
+  gameStatusMessage: string = 'Get ready to play Rock Paper Scissors!';
   gameOutcome: string = 'Pending';
   choices: string[] = ['Rock','Paper','Scissors'];
-  computerSelection: string = 'Not Ready';
+  computerSelection: string = 'Thinking';
+  playerSelection: string = 'Thinking';
 
   constructor() { }
 
@@ -25,6 +26,7 @@ export class BasicGameComponent implements OnInit {
   playGame(playerChoice:string) {
     this.inGame=true;
     this.computerSelect();
+    this.playerSelection = playerChoice;
     if (this.computerSelection === playerChoice) {
       this.gameOutcome = 'tie';
       this.gameStatusMessage = `It's a tie! We both picked ${playerChoice}`;
@@ -38,7 +40,8 @@ export class BasicGameComponent implements OnInit {
   }
 
   handleBanana() {
-    this.gameStatusMessage="Hey, this isn't Rock Paper Banana!"
+    this.playerSelection="Banana";
+    this.gameStatusMessage="Hey, this isn't Rock Paper Banana!";
   }
 
 }

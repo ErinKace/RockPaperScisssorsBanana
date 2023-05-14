@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+/* Hex Codes: Dark Blue 086788, Yellow FFE066, Light Blue 06AED5, Brown BA5624, Dark Purple Brown 381D2A */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #086788;
+    margin: 0px;
+    padding:0px;
+}
+
+h1 {
+    font-size: 6vh;
+    text-align: center;
+}
+
+.header {
+    margin:0px;
+    padding: 10px;
+    background-color: #FFE066;
+}
+
+h2 {
+    color: #FFF;
+    font-size: 36px;
+}
+
+button {
+    background-color: #FFE066;
+    border-radius: 3px;
+    border: none;
+    padding: 12px 22px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight:bold;
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  h3 {
+    color: #FFF;
+    font-size: 26px;
+  }
